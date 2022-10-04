@@ -1,0 +1,320 @@
+body{
+    font-family: 'Heebo', sans-serif;
+    color: #000000; 
+}
+
+/* AWAL HEADER */
+.header {
+    padding: 15px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 9;
+    background-color: #FFFFFF;
+}
+
+.logo {
+    width: 151px;
+    display: flex;
+    align-items: center;
+}
+
+.menu {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.menu a {
+    display: block;
+    margin: 16px;
+    text-decoration: none; 
+    color: #000000;
+    font-weight: 500;
+    font-size: 18px;
+}
+
+.burger-icon {
+    display: none;
+}
+
+@media (max-width: 991px){
+    .burger-icon {
+        flex: 1;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+
+    }
+    .burger-icon img {
+        width: 40px;
+    }
+}
+
+/* AWAL SIDEBAR */
+/* SIDEBAR dan OVERLAY */
+.sidebar{
+    flex: 1;
+}
+
+.top-sidebar {
+    display: none;
+}
+
+.overlay-bg{
+    display: none;
+}
+
+@media (max-width : 991px){
+    .sidebar{
+        position: absolute;
+        background: #FFFFFF;
+        box-shadow: 0px 0px 4px rgba(0,0,0,0.15);
+        width: 220px;
+        top: 0;
+        right: -220px;
+        height: 100vh;
+        padding: 32px 24px 0px 16px;
+        z-index: 1;
+        transition: 0.5s;
+    }
+
+    .sidebar h3{
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 24px;
+    }
+
+    .sidebar a{
+        padding-top: 12px;
+        font-weight: 500;
+        font-size: 14px;
+        margin: 6px;
+    }
+
+    .sidebar.menu-active{
+        right: 0;
+    }
+
+    .overlay-bg{
+        position: absolute;
+        width: 100vw;
+        height: 100vh;
+        top: 0;
+        left: 0;
+        background: rgba(0, 0, 0, 0.6);
+        display: block;
+        opacity: 0;
+        visibility: hidden;
+        transition: 1s;
+    }
+
+    .overlay-bg.menu-active{
+        visibility: visible;
+        opacity: 1;
+    }
+
+    .top-sidebar{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .top-sidebar .h3{
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 20px;
+    }
+
+    .menu {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .menu a{
+        margin-left: 0;
+    }
+}
+/* AKHIR SIDEBAR */
+/* AKHIR HEADER */
+
+/* AWAL HERO SECTION atau BANNER */
+.hero-section {
+    background: #FFFFFF;
+    padding: 120px 0px 154px ;
+    position: relative;
+}
+
+.hero-section .container{
+    padding: 60px 0px;
+}
+
+.box-hero {
+    display: flex;
+    align-items: center;
+}
+
+.hero-section h1 {
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 1.5;
+    color: #21243D;
+}
+
+.hero-section p {
+    font-weight:300;
+    font-size: 14px;
+    line-height: 1.5;
+    max-width: 75%;
+    margin: 20px 0px;
+    text-align: justify;
+    color: #21243D;
+}
+
+.hero-section a {
+    background: #FF6464;
+    border-color: #FF6464;
+    border-radius: 2px;
+    padding: 8px 12px;
+    font-weight: 500;
+    font-size: 14px;
+    color: #FFFFFF;
+    line-height: 1.5;
+}
+.hero-thumbnail img {
+    width: 270px;
+    height: 270px;
+    border-radius: 180px;  
+    position:relative;
+}
+
+@media (max-width: 1024px){
+    .box-hero{
+        padding-left: 20px;
+    }
+    .hero-thumbnail{
+        flex: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 991px) {
+    .box-hero{
+        display: flex;
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+    .hero-content {
+        padding-top: 40px;
+        text-align: center;
+    }
+    .hero-thumbnail img{
+        position: relative;
+        width: 200px;
+        height: 200px;
+        right: auto;
+        bottom: auto;
+    }
+    .hero-content h1 {
+        font-size: 32px;
+    }
+  
+    .hero-content p {
+        max-width: 100%;
+        text-align: center;
+    }
+    .logo {
+        display: none;
+    }
+}
+
+@media (min-width: 1600px) { 
+    .hero-thumbnail {
+        width: 40%;
+    }
+}
+/* AKHIR HERO SECTION atau BANNER */
+
+/* AWAL WORKS */
+.works{
+    background-color: #21243D;
+    padding: 40px 0px 120px;
+}
+
+.works h2{
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 60px;
+    color: #FFFFFF;
+    padding-bottom: 15px;
+}
+
+.works .card {
+    margin: 10px 0px;
+    padding: 24px;
+    border-radius: 10px;
+}
+
+.works img{
+    padding: 10px;
+}
+
+.works h5{
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 24px;
+    padding-top: 4px;
+}
+.works p{
+    padding-top: 12px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+    text-align: justify;
+}
+.works a{
+    background: #FF6464;
+    border-color: #FF6464;
+    color: #FFFFFF;
+    border-radius: 2px;
+    padding: 10px 0px ;
+    margin-top: 20px;
+    width: 100%;
+
+    font-weight: 700;
+    font-size: 14px;
+}
+
+@media (max-width:991px){
+    .works .card{
+        width: 100%;
+        height: auto;
+        margin: 12px auto;
+        display: flex;
+        align-items: center;
+    }
+}
+/* AKHIR WORKS */
+
+/* AWAL FOOTER */
+.footer{
+    padding: 45px 0px 30px;
+}
+
+.menu-footer {
+    display: flex;
+    justify-content: center;
+}
+
+.footer a{
+    margin: 16px;
+}
+
+.footer h3{
+    padding-top: 16px;
+    text-align: center;
+}
+/* AKHIR FOOTER */
